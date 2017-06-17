@@ -1,0 +1,17 @@
+#Кодировка
+AddDefaultCharset UTF-8
+
+#Отключаем магические кавычки
+php_flag magic_quotes_gpc Off
+php_flag magic_quotes_runtime Off
+
+#Отключаем глобальные переменные
+php_flag register_globals Off
+
+#Перенаправляем запросы на подготовленные страницы в случае ошибки сервера
+ErrorDocument 401 /401.html
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+
+#Запретит вывод списка файлов и директорий, если в папке не окажется индекса
+Options -Indexes
