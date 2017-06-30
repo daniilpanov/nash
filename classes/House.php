@@ -3,8 +3,8 @@
 //создаем новый класс
 class House
 {
-    public $owner;
-    public $roof; //свойство
+    public $owner; //свойство
+    public $roof;
     public $walls;
     public $windows;
     public $fasad;
@@ -32,13 +32,8 @@ $daniil_house = new House();
 $ivan_house = new House();
 
 $daniil_house->buildHouse("Даниила","синяя","кирпича",2,"красный");
+$ivan_house->buildHouse("Ивана","оранжевая","бетона",2,"зелёный");
 
-
-$ivan_house->owner = "Ивана";
-$ivan_house->roof = "оранжевый";
-$ivan_house->walls = "бетона";
-$ivan_house->windows = 1;
-$ivan_house->fasad = "зеленый";
 
 $daniil_house->aboutHouse();
 $ivan_house->aboutHouse();
