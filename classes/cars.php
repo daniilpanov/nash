@@ -19,3 +19,7 @@ class Auto
     }
 }
 
+class Truck
+{
+
+}
