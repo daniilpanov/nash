@@ -1,52 +1,54 @@
 <?php
 class Auto
 {
-    public $a;
-    public $m;
-    public $c;
-    public $s;
+    public $year;
+    public $model;
+    public $color;
+    public $speed;
     public static $sum;
-    public function__construct($ag,$M,$co,$sp){
-        $this->a = $ag;
-        $this->m = $M;
-        $this->c =$co;
-        $this->s = $sp;
+
+    public function __construct($y,$m,$c,$s){
+        $this->year = $y;
+        $this->model = $m;
+        $this->color =$c;
+        $this->speed = $s;
         $this->AboutAuto();
-        self::$sum++;
+        static::$sum++;
 }
 
-public function AboutAuto (){
-    echo "Год выпуска модели".$this->m."-".$this->a.".<br>";
-    echo "А цвет этой машины".$this->c.".<br>";
-    echo "Эта машина может разогнаться до скорости".$this->s."!<br><br>";
+    public function AboutAuto (){
+    echo "Год выпуска модели ".$this->model."-".$this->year.".<br>";
+    echo "А цвет этой машины ".$this->color.".<br>";
+    echo "Эта машина может разогнаться до скорости ".$this->speed."!<br>";
     }
 }
 
 class Truck extends Auto
 {
-    public $g;
-    public function__construct($ag,$M,$co,$sp,$gr){
-        parent::__construct($ag,$M,$co,$sp);
-        $this->g = $gr;
+    public $cargo;
+    public static $sum;
+
+    public function __construct($y,$m,$c,$s,$cg){
+        parent::__construct($y,$m,$c,$s);
+        $this->cargo = $cg;
         $this->AboutTruck();
     }
     public function AboutTruck(){
-        echo "Этот грузовик способен перевозить до".$this->g = gr.".<br>";
+        echo "Этот грузовик способен перевозить до ".$this->cargo." тн. груза .<br>";
     }
 }
 
 class Bus extends Auto
 {
-    public $hm;
-    public function__construct($ag,$M,$co,$sp,$h){
-        parent::__construct($ag,$M,$co,$sp);
-        $this->hm = $h;
+    public $seats;
+    public static $sum;
+
+    public function __construct($y,$m,$c,$s,$st){
+        parent::__construct($y,$m,$c,$s);
+        $this->seats = $st;
         $this->AboutBus();
     }
     public function AboutBus(){
-        echo "Этот автобус способен перевозить до".$this->h = hm.".<br>";
+        echo "Этот автобус способен перевозить до ".$this->seats." человек.<br>";
     }
 }
-$mother_car = car Auto(2015,"OPEL","тёмно-синий","199км/ч");
-$aunt_car = car Bus(2001,"VOLVO","оранжевый","150км/ч","50 чел");
-$mother_friend_car Truck(2010,"MEN","коричневый","150км/ч","5т");
