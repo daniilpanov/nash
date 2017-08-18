@@ -25,3 +25,16 @@ class House
         $this->fasad = $f;
     }
 }
+
+// создаем обьекты
+
+$daniil_house = new House();
+$ivan_house = new House();
+
+$daniil_house->buildHouse("Даниила","синяя","кирпича",2,"красный");
+$ivan_house->buildHouse("Ивана","оранжевая","бетона",2,"зелёный");
+
+
+$daniil_house->aboutHouse();
+$ivan_house->aboutHouse();
+
