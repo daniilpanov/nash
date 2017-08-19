@@ -1,6 +1,6 @@
 <h6> логин</h6>
 <a href="kostu/">игра в кости...</a>
-
+<a href="views/VLottery.php">Лотерея</a>
 <form method="post">
 Как вас зовут?
 <input type="text" name="imja"><br>
