@@ -11,16 +11,15 @@ class CLottery
 
     public function __construct($data)
     {
-        echo "<table><tr>";
 
-        echo "<td>".$this->one=$data["numb1"]."</td>";
-        echo "<td>".$this->two=$data["numb2"]."</td>";
-        echo "<td>".$this->three=$data["numb3"]."</td>";
-        echo "<td>".$this->four=$data["numb4"]."</td>";
-        echo "<td>".$this->five=$data["numb5"]."</td>";
-        echo "<td>".$this->six=$data["numb6"]."</td>";
-        echo "</tr></table>";
+        $this->one = $data["numb1"];
+        $this->two = $data["numb2"];
+        $this->three = $data["numb3"];
+        $this->four = $data["numb4"];
+        $this->five = $data["numb5"];
+        $this->six = $data["numb6"];
     }
+
     public function checklottery(){
         $a=rand(1,36);
         for($b=rand(1,36);$b==$a;){
@@ -41,10 +40,17 @@ class CLottery
 
         if ($a==$this->one && $b==$this->two && $c==$this->three && $d==$this->four && $e==$this->five && $f==$this->six){
             echo "ВЫ ВЫИГРАЛИ!";
-        }
-        if ($_POST) {
-
             ?>
+            <table>
+                <tr>
+                    <td><?=$this->one?></td>
+                    <td><?=$this->two?></td>
+                    <td><?=$this->three?></td>
+                    <td><?=$this->four?></td>
+                    <td><?=$this->five?></td>
+                    <td><?=$this->six?></td>
+                </tr>
+            </table>
             <table>
                 <tr>
                     <td><?=$a?></td>
@@ -55,6 +61,33 @@ class CLottery
                     <td><?=$f?></td>
                 </tr>
             </table>
+            <a href="../views/VLottery.php">Сыграть ещё?</a>
+            <?php
+
+        }
+        else{
+            echo "Вы проиграли. Вот ваши результаты:";
+            ?>
+            <table>
+            <tr>
+                <td><?=$this->one?></td>
+                <td><?=$this->two?></td>
+                <td><?=$this->three?></td>
+                <td><?=$this->four?></td>
+                <td><?=$this->five?></td>
+                <td><?=$this->six?></td>
+            </tr>
+            <table>
+                <tr>
+                    <td><?=$a?></td>
+                    <td><?=$b?></td>
+                    <td><?=$c?></td>
+                    <td><?=$d?></td>
+                    <td><?=$e?></td>
+                    <td><?=$f?></td>
+                </tr>
+            </table>
+            <a href="../views/VLottery.php">Сыграть ещё?</a>
             <?php
         }
     }

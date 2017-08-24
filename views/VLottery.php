@@ -44,6 +44,7 @@ if(!$_POST) {?>
     <?php
 }
 else{
+
     $lottery= new CLottery($_POST);
     $lottery->checklottery();
 }
