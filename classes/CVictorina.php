@@ -12,10 +12,4 @@ class CVictorina
     public $eighth;
     public $nineth;
     public $teenth;
-    public static $sum;
-
-    public function __construct($data){
-        $this->first=$data["one"];
-        static :: $sum++;
-    }
 }
