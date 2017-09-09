@@ -1,15 +1,10 @@
 <?php
 
-class CVictorina
+class CVictorina extends MVicrorina
 {
-    public $first;
-    public $second;
-    public $third;
-    public $fourth;
-    public $fifth;
-    public $sixth;
-    public $seventh;
-    public $eighth;
-    public $nineth;
-    public $teenth;
+    public function getoneAnswer($id)
+    {
+        $answer = $this->getAnswers($id);
+        return $answer;
+    }
 }

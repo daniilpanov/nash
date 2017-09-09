@@ -26,9 +26,6 @@ class Db extends Config
 		{
             die("Ошибка соединения с базой данных: ". mysqli_error());
         }
-        else{
-            echo "Мы подключились к Базе данных";
-        }
         
         // установка принудительной кодировки UTF-8
         mysqli_query($this->connection, "set names utf8") or die ("set names utf8 failed");
