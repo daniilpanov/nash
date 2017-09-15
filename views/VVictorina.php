@@ -1,3 +1,4 @@
+
 <?php
 function __autoload($class_name)
 {
@@ -9,21 +10,21 @@ $connectDB = new Db();
 $answers = new CVictorina();
 $data = $answers->getoneAnswer(1);
 
-foreach ($data as $value){
 
-
-       // $answers[] = $value;
-
-
+foreach ($data as $value)
+{
+       //$answers[] = $value;
 }
+
 echo "<PRE>";
-var_dump($value);
+var_export($value);
 echo "</PRE>";
-
+// Надо вставить в кнопки ответы.
 ?>
-
 <form method="post">
-    <input type="text" name="">
-    <input type="submit" value="продолжить">
+    <!--question-->
+    <button><!--(response1)--></button>
+    <button><!--(response2)--></button>
+    <button><!--(response3)--></button>
+    <button><!--(response4)--></button>
 </form>
-
