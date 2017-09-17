@@ -43,7 +43,7 @@ class Db extends Config
         }
         return $result;
     }
-	
+
 	// закрываем соединение с сервером БД
 	public function  __destruct()
 	{
