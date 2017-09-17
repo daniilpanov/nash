@@ -1,0 +1,9 @@
+div.jumbotron{
+    background: orange;
+}
+p{
+    background: lightblue;
+}
+a{
+    border: 5px dotted black;
+}
