@@ -20,6 +20,13 @@ for ($id = 1;$id<=99;$id++){
             echo "Вы проиграли";
         }
     }
+    #сделать что-то типо этого (см. далее).
+    /*if(!$value){
+        die();
+    }*/
+    /*if ($value == $value){
+        die();
+    }*/
     ?>
     <div class="jumbotron">
         <?="<center><p>".$value['question']."</p></center>";?>
@@ -30,9 +37,6 @@ for ($id = 1;$id<=99;$id++){
         <a class="btn btn-primary btn-lg" href="?response=<?=$value['response3'];?>" role="button"><?=$value['response3'];?></a>
         <a class="btn btn-primary btn-lg" href="?response=<?=$value['response4'];?>" role="button"><?=$value['response4'];?></a></center>
     <?php
-    //сделать что-то типо этого (см. далее).
-    /*if ($value == $value){
-        die();
-    }*/
+
 }
 require_once "../footer.php";
