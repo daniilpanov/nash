@@ -8,39 +8,36 @@ function __autoload($class_name)
 // подключимся к БД
 $connectDB = new Db();
 $answers = new CVictorina();
-$id = 1;
-while ($id<=99){
+
+$good =1;
+
+for($id=1;$id<=$good;$id++)
+{
     $data = $answers->getoneAnswer($id);
     foreach ($data as $value)
     if($_GET){
         $user_responce = $_GET['response'];
         if($user_responce == $value['valid_responce']){
             echo "Правильный ответ";
+            $good++;
+
         }
         else{
             echo "Вы проиграли";
         }
     }
-    #сделать что-то типо этого (см. далее).
-    /*
-    if ($value == $value){
-        continye();
-    }
-    if(3 continye){
-    break
-    }
-    */
-    $id++;
 
-    echo "<div class=\"jumbotron\">";
-        echo"<center><p>". $value['question'] ."</p></center>";
-    echo "</div>";
+    ?>
+    <div class="jumbotron">
+        <p><?=$value['question']?></p>
+    </div>
 
-    echo "<center><a class=\"btn btn-primary btn-lg\" href=\"?response=$value['response1']\" role=\"button\">$value['response1']</a>";
-    echo "<a class=\"btn btn-primary btn-lg"/ href="?response=<?=$value['response2'];?>" role="button"><?=$value['response2'];?></a>"
-    echo"<a class="btn btn-primary btn-lg" href="?response=<?=$value['response3'];?>" role="button"><?=$value['response3'];?></a>"
-    echo"<a class="btn btn-primary btn-lg" href="?response=<?=$value['response4'];?>" role="button"><?=$value['response4'];?></a></center>"
 
+    <a class="btn btn-primary btn-lg" href="?response=<?=$value['response1'];?>" role="button"><?=$value['response1'];?></a>
+    <a class="btn btn-primary btn-lg" href="?response=<?=$value['response2'];?>" role="button"><?=$value['response2'];?></a>
+    <a class="btn btn-primary btn-lg" href="?response=<?=$value['response3'];?>" role="button"><?=$value['response3'];?></a>
+    <a class="btn btn-primary btn-lg" href="?response=<?=$value['response4'];?>" role="button"><?=$value['response4'];?></a>
+<?php
 
 }
 require_once "../footer.php";
