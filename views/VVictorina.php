@@ -18,18 +18,31 @@ for($id=1;$id<=$good;$id++)
     if($_GET){
         $user_responce = $_GET['response'];
         if($user_responce == $value['valid_responce']){
-            echo "Правильный ответ";
+            $answ = "Правильный ответ";
             $good++;
+            /*?>
+            <a class ="btn btn-primary btn-lg" href="?then <?=$user?>" role="button"><h3>Далее</h3></a>
 
+            <?php
+            if ($user !=  $i){
+                die();
+            }
+*/
         }
-        else{
-            echo "Вы проиграли";
+        else/*if($user_responce != $user)*/{
+            $answ = "Вы проиграли";
         }
+        /*else{
+            $answ = "Правильный ответ";
+        }
+
+         */
     }
 
 }
 require_once "../footer.php";
 ?>
+<h1><?=$answ;?></h1>
 <div class="jumbotron">
     <p><?=$value['question']?></p>
 </div>
