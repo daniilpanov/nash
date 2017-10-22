@@ -27,8 +27,6 @@ for ($id=1;$id>=99;)
             ?>
             <script>
                 setTimeout(function id,500,$id)
-
-                )
             </script>
             <?php
             for ($numb = 5;$numb<=0;$numb--)
