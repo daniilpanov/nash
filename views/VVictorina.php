@@ -17,22 +17,22 @@ for ($id=1;$id>=99;)
     $data = $answers->getoneAnswer($id);
     foreach ($data as $value)
 
-
+    $time;
     if($_GET){
         $user_responce = $_GET['response'];
         if($user_responce == $value['valid_responce']){
-            function id($id){
+            function IdTime($id,$time){
                 $id++;
+                $time--;
             }
             ?>
             <script>
-                setTimeout(function id,500,$id)
+                setTimeout(function IdTime,5000,$id)
             </script>
             <?php
-            for ($numb = 5;$numb<=0;$numb--)
 
-            $answ = "Правильный ответ! Через ".$numb."Вы перейдёте к следующему заданию.";
-            if ($numb == 0){
+            $answ = "Правильный ответ! Через ".$time."Вы перейдёте к следующему заданию.";
+            if ($time == 0){
                 $answ ="";
             }
         }
