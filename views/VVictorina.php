@@ -1,43 +1,37 @@
 
 <?php
-// У меня почему-то не работает это.
-# Даже то, что было на GitHub, хотя раньше - работало.
-
 require_once "../header.php";
 function __autoload($class_name)
 {
     require_once("../classes/".$class_name . ".php");
 }
-// подключимся к БД
-$connectDB = new Db();
+
 $answers = new CVictorina();
 
-for ($id=1;$id>=99;)
-{
-    $data = $answers->getoneAnswer($id);
-    foreach ($data as $value)
+    $id=1;
+    do
+    {
 
-    $time;
-    if($_GET){
+        $data = $answers->getoneAnswer($id); // получили ответы на один вопрос
+
         $user_responce = $_GET['response'];
-        if($user_responce == $value['valid_responce']){
-            function IdTime($id,$time){
-                $id++;
-                $time--;
-            }
-            ?>
-            <script>
-                setTimeout(function IdTime,5000,$id)
-            </script>
-            <?php
 
-            $answ = "Правильный ответ! Через ".$time."Вы перейдёте к следующему заданию.";
-            if ($time == 0){
-                $answ ="";
-            }
+        foreach ($data as $value){}
+
+        // проверяем правильный ли ответ
+        if ($user_responce == $value['valid_responce'])
+        {
+            $answ = "Правильный ответ";
+            $id++;
+
+        } else {
+            //$answ = "Вы проиграли";
+            $id = 6;
         }
+
     }
-}
+    while($id<=5);
+
 
 ?>
 <h1><?=$answ;?></h1>
@@ -50,5 +44,4 @@ for ($id=1;$id>=99;)
 <a class="btn btn-primary btn-lg" href="?response=<?=$value['response2'];?>" role="button"><?=$value['response2'];?></a>
 <a class="btn btn-primary btn-lg" href="?response=<?=$value['response3'];?>" role="button"><?=$value['response3'];?></a>
 <a class="btn btn-primary btn-lg" href="?response=<?=$value['response4'];?>" role="button"><?=$value['response4'];?></a>
-<?php
-require_once "../footer.php";
+<?php require_once "../footer.php";
