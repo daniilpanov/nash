@@ -1,0 +1,19 @@
+text{
+    background: gray;
+}
+p#tr{
+    text-decoration: underline wavy darkblue;
+}
+p#td{
+    text-decoration: underline wavy #bf2900;
+}
+table{
+    background: green;
+    text-decoration-color: lightgray;
+}
+tr{
+    padding: 1px;
+}
+td{
+    padding: 1px;
+}

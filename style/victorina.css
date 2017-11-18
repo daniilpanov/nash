@@ -1,7 +1,22 @@
 div.jumbotron{
-    background: red;
+    background: darkred;
 
 }
 p{
     background: blue;
+}
+div.right{
+    background: green;
+}
+div.wrong{
+    background: red;
+}
+a{
+    background: darkblue;
+}
+div#profile{
+    background: lightgrey;
+}
+div.profile{
+    background: lightgrey;
 }
