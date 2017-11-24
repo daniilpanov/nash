@@ -38,31 +38,34 @@ class CLottery
             $f=rand(1,36);
         }
             ?>
-            <table>
-                <tr>
-                    <td><h1>Вот ваши результаты:</h1></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><?=$this->one?></td>
-                    <td><?=$this->two?></td>
-                    <td><?=$this->three?></td>
-                    <td><?=$this->four?></td>
-                    <td><?=$this->five?></td>
-                    <td><?=$this->six?></td>
-                </tr>
-                <tr>
-                    <td><?=$a?></td>
-                    <td><?=$b?></td>
-                    <td><?=$c?></td>
-                    <td><?=$d?></td>
-                    <td><?=$e?></td>
-                    <td><?=$f?></td>
-                </tr>
-            </table>
-            <a href="../views/VLottery.php">Сыграть ещё?</a>
-            <?php
-
+            <center>
+                <table>
+                    <tr>
+                        <td><h1>Вот ваши результаты:</h1></td>
+                    </tr>
+                </table>
+                <table>
+                    <h1>
+                        <tr>
+                            <td><?=$this->one?></td>
+                            <td><?=$this->two?></td>
+                            <td><?=$this->three?></td>
+                            <td><?=$this->four?></td>
+                            <td><?=$this->five?></td>
+                            <td><?=$this->six?></td>
+                        </tr>
+                        <tr>
+                            <td><?=$a?></td>
+                            <td><?=$b?></td>
+                            <td><?=$c?></td>
+                            <td><?=$d?></td>
+                            <td><?=$e?></td>
+                            <td><?=$f?></td>
+                        </tr>
+                    </h1>
+                </table>
+                <a href="../views/VLottery.php">Сыграть ещё?</a>
+            </center>
+        <?php
     }
 }
