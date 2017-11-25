@@ -1,3 +1,6 @@
+<?php
+require_once "../header.php";
+?>
 <form method="post">
     <table>
         <tr>
@@ -15,26 +18,6 @@
         <tr><td><h1><input type="submit" value="Создать"></h1></td></tr>
     </table>
 </form>
-<table>
-<?php
-for($tr=1;$tr<=$_POST['tr'];$tr++){
-    echo "<tr>";
-    if ($tr == 1){
-        for ($td=1;$td<=$_POST['td'];$td++){
-            echo "<td>";
-            echo $td;
-            echo "</td>";
-        }
-    }
-    else{
-        for ($td=1;$td<=$_POST['td'];$td++){
-            echo "<td>";
-            echo $tr*$td;
-            echo "</td>";
-        }
-    }
 
-    echo "</tr>";
-}
-?>
-</table>
+<?php
+pifagorTable($_POST['tr'],$_POST['td']);
