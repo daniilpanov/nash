@@ -9,6 +9,8 @@ class House
     public $windows;
     public $fasad;
 
+    static $col;
+
     public function aboutHouse(){
         echo "Дом ".$this->owner."<br>";
         echo "Цвет крыши ".$this->roof."<br>";
@@ -23,18 +25,6 @@ class House
         $this->walls =$w;
         $this->windows = $wnd;
         $this->fasad = $f;
+        static::$col++;
     }
 }
-
-// создаем обьекты
-
-$daniil_house = new House();
-$ivan_house = new House();
-
-$daniil_house->buildHouse("Даниила","синяя","кирпича",2,"красный");
-$ivan_house->buildHouse("Ивана","оранжевая","бетона",2,"зелёный");
-
-
-$daniil_house->aboutHouse();
-$ivan_house->aboutHouse();
-
