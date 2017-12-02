@@ -28,7 +28,7 @@ if(!$_POST) {?>
     </table></center>
 
     <form method="post">
-        ведите 6 любых чисел от 1 до 36
+        введите 6 любых чисел от 1 до 36
         <center>
             <table>
                 <tr>
@@ -45,12 +45,13 @@ if(!$_POST) {?>
     </form>
     <?php
 }
+if ($_POST<36){
+    die("<p>Вы ввели число, которое больше 36</p>");
+}
 else{
-
     $lottery= new CLottery($_POST);
     $lottery->checklottery();
 }
-
 ?>
 </body>
 </html>

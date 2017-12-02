@@ -21,6 +21,7 @@ class CLottery
     }
 
     public function checklottery(){
+        // Проверка чисел rand
         $a=rand(1,36);
         for($b=rand(1,36);$b==$a;){
             $b=rand(1,36);
@@ -64,7 +65,6 @@ class CLottery
                         </tr>
                     </h1>
                 </table>
-                <a href="../views/VLottery.php">Сыграть ещё?</a>
             </center>
         <?php
     }
