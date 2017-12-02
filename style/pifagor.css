@@ -7,3 +7,7 @@ body
 {
     background-color: grey;
 }
+td{
+    border: 1px black solid;
+    padding: 2px;
+}

@@ -28,7 +28,7 @@
             echo "<tr>";
             if ($tr == 1){
                 for ($td=1;$td<=$_POST['td'];$td++){
-                    echo "<td>";
+                    echo "<td class='first'>";
                     echo $td;
                     echo "</td>";
                 }
