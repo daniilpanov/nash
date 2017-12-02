@@ -35,7 +35,13 @@
             }
             else{
                 for ($td=1;$td<=$_POST['td'];$td++){
-                    echo "<td>";
+                    if($td==1){
+                        echo "<td class='first'>";
+                    }
+                    else{
+                        echo "<td>";
+                    }
+
                     echo $tr*$td;
                     echo "</td>";
                 }

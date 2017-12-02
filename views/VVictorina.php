@@ -8,6 +8,8 @@ function __autoload($class_name)
 {
     require_once("../classes/".$class_name . ".php");
 }
+
+echo "ok";
 // подключимся к БД
 $answers = new CVictorina();
 $id=1;
