@@ -16,6 +16,7 @@ function __autoload($class_name)
 {
     require_once("../classes/".$class_name . ".php");
 }
+
 if(!$_POST) {?>
 
     <center><table>
@@ -45,7 +46,7 @@ if(!$_POST) {?>
     </form>
     <?php
 }
-if ($_POST<36){
+if ($_POST>36){
     die("<p>Вы ввели число, которое больше 36</p>");
 }
 else{
