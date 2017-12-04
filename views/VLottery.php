@@ -46,7 +46,7 @@ if(!$_POST) {?>
     </form>
     <?php
 }
-if ($_POST>36){
+elseif($_POST>36){
     die("<p>Вы ввели число, которое больше 36</p>");
 }
 else{
