@@ -1,5 +1,6 @@
-<body >
+<body>
 <?
+
 require_once "menu.php";
 
 
@@ -20,9 +21,11 @@ if ($_GET['in'] == "Pifagor"){
 if ($_GET['in'] == "Time"){
     require_once "lib/Time.php";
     ?>
-    <span id="doc_time">
-        Дата и время
-    </span>
+    <center>
+        <span id="doc_time">
+            Дата и время
+        </span>
+    </center>
     <script>
         clock();
     </script>
