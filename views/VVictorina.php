@@ -8,8 +8,6 @@ function __autoload($class_name)
 {
     require_once("../classes/".$class_name . ".php");
 }
-
-echo "ok";
 // подключимся к БД
 $answers = new CVictorina();
 $id=1;
@@ -52,8 +50,8 @@ while ($id>=99)
     <div>
         <p>Правильных ответов<?=$right?></p>
         <p>Неправильных ответов<?=$wrong?></p>
-    </div
+    </div>
 </center>
->
+
 <?php
 require_once "../footer.php";

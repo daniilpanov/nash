@@ -12,7 +12,6 @@ if ($_GET['in'] == "lottery"){
     require_once "views/VLottery.php";
 }
 if ($_GET['in'] == "victorina"){
-    echo "victorina";
     require_once "views/VVictorina.php";
 }
 if ($_GET['in'] == "Pifagor"){
