@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-
-    <title>ЛОТЕРЕЯ</title>
-
-    <!--CSS-->
-    <link href="../style/lottery.css" rel="stylesheet" />
-    <!--End CSS--><!DOCTYPE html>
-</head>
-
-<body>
 <?php
 function __autoload($class_name)
 {
@@ -32,7 +19,7 @@ if(!$_POST) {
     <form method="post">
         введите 6 любых чисел от 1 до 36
         <center>
-            <table>
+            <table id="1">
                 <tr>
                     <td>1-е <input type="text" name="numb1"></td>
                     <td>2-е <input type="text" name="numb2"></td>
@@ -47,13 +34,11 @@ if(!$_POST) {
     </form>
     <?php
 }
-elseif($_POST['numb1']>36 || $_POST['numb2']>36 || $_POST['numb3']>36 || $_POST['numb4']>36 || $_POST['numb5']>36 || $_POST['numb6']>36){
-    echo "<p>Вы ввели число, которое больше 36. Попробуйте ещё раз.</p>";
+if($_POST['numb1']>36 || $_POST['numb2']>36 || $_POST['numb3']>36 || $_POST['numb4']>36 || $_POST['numb5']>36 || $_POST['numb6']>36){
+    echo "<p>Вы ввели число, которое больше 36.<a href=\"VLottery.php\"><b><i>Сыграть ещё раз</i></b></a></p>";
 }
-else{
+elseif($_POST){
     $lottery= new CLottery($_POST);
     $lottery->checklottery();
+    echo "<a href=\"VLottery.php\"><b><i>Сыграть ещё раз</i></b></a>";
 }
-?>
-</body>
-</html>

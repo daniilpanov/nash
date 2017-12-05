@@ -1,9 +1,45 @@
-table {
-	border: 5px dotted red; /*������������� ��� ������� ������� ������� ������ ����� �������� 1px*/
+div.jumbotron{
+	background: darkred;
+}
+p#1{
+	background: blue;
+}
+div.right{
+	background: green;
+}
+div.wrong{
+	background: red;
+}
+.first
+{
+	background-color: yellow;
+}
+td#2{
+	border: 1px black solid;
+	padding: 2px;
+	background-color: olive;
+}
+span#doc_time {
+	border: 3px darkblue ridge;
+}
+a.btnX{
+	background: olive;
+	padding: 15px;
+	text-decoration: blink;
+}
+body{
+	background-image: url(../Lighthouse.jpg);
+	background-repeat: no-repeat;
+	margin: 0px;
+	background-color:lightblue ;
+}
+table#1{
+	border: 2px dashed darkred;
+}
+table#2{
+	border: 4px solid darkblue;
 }
 td{
-	padding: 5px;
+	padding: 1px;
+	border: 1px solid darkblue;
 }
-
-
-

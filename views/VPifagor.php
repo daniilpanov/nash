@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head><link href="../style/pifagor.css" rel="stylesheet"></head>
-<body>
 <form method="post">
     <center>
         <table>
@@ -41,7 +37,7 @@
                         echo "<td class='first'>";
                     }
                     else{
-                        echo "<td>";
+                        echo "<td id='2'>";
                     }
 
                     echo $tr*$td;
@@ -54,7 +50,3 @@
         ?>
     </table>
 </center>
-
-
-</body>
-</html>
