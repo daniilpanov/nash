@@ -1,0 +1,19 @@
+td#2{
+    border: 1px black solid;
+    padding: 2px;
+    background-color: olive;
+}
+span#doc_time {
+    border: 3px darkblue ridge;
+}
+a.btnX{
+    background: olive;
+    padding: 15px;
+    text-decoration: blink;
+}
+body{
+    background-image: url(../Lighthouse.jpg);
+    background-repeat: no-repeat;
+    margin: 0px;
+    background-color:lightblue ;
+}

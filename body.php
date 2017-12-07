@@ -18,8 +18,8 @@ if ($_GET['in'] == "Pifagor"){
     require_once "views/VPifagor.php";
 }
 if ($_GET['in'] == "Time"){
-    require_once "lib/Time.php";
     ?>
+    <script type="text/javascript" src="lib/Time.js"></script>
     <center>
         <span id="doc_time">
             Дата и время

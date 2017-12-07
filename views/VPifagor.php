@@ -1,16 +1,16 @@
 <form method="post">
     <center>
-        <table>
+        <table class="X">
             <tr>
-                <td>
-                    <p id="tr">Введите кол-во строчек</p>
-                    <input type="text" name="td">
+                <td id='2'>
+                    <p id='tr'>Введите кол-во строчек</p>
+                    <input type="number" name="td">
                 </td>
             </tr>
             <tr>
-                <td>
-                    <p id="td">Введите кол-во столбцов</p>
-                    <input type="text" name="tr">
+                <td id='2'>
+                    <p id='td'>Введите кол-во столбцов</p>
+                    <input type="number" name="tr">
                 </td>
             </tr>
             <tr><td><h1><input type="submit" value="Создать"></h1></td></tr>
@@ -18,7 +18,7 @@
     </center>
 </form>
 <center>
-    <table>
+    <table class="X">
         <?php
         for($tr=1;$tr<=$_POST['tr'];$tr++){
             echo "<tr>";

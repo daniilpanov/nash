@@ -42,3 +42,6 @@ elseif($_POST){
     $lottery->checklottery();
     echo "<a href=\"VLottery.php\"><b><i>Сыграть ещё раз</i></b></a>";
 }
+else{
+    echo "Введите в поля числа!";
+}
