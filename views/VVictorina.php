@@ -1,9 +1,4 @@
-
 <?php
-// У меня почему-то не работает это.
-# Даже то, что было на GitHub, хотя раньше - работало.
-
-require_once "../header.php";
 function __autoload($class_name)
 {
     require_once("../classes/".$class_name . ".php");
@@ -11,8 +6,8 @@ function __autoload($class_name)
 // подключимся к БД
 $answers = new CVictorina();
 $id=1;
-$right = 0;
-$wrong = 0;
+$ansvers_right = 0;
+$ansvers_wrong = 0;
 while ($id>=99)
 {
     $data = $answers->getoneAnswer($id);
@@ -21,13 +16,13 @@ while ($id>=99)
         $user_responce = $_GET['response'];
         if($user_responce == $value['valid_responce']) {
             $answ = "Правильный ответ!";
-            $right++;
+            $ansvers_right++;
         }
         else{
             $answ = "Неправильный ответ.";
-            $wrong++;
+            $ansvers_wrong++;
         }
-        if ($GET['go']){
+        if ($_GET['go']){
             $answ ="";
             $id++;
         }
@@ -47,11 +42,14 @@ while ($id>=99)
 <a class="btn btn-primary btn-lg" href="?response=<?=$value['response4'];?>" role="button"><?=$value['response4'];?></a>
 <a class="btn btn-primary btn-lg" href="?go=then" role="button">Далее</a>
 <center>
-    <div>
-        <p>Правильных ответов<?=$right?></p>
-        <p>Неправильных ответов<?=$wrong?></p>
-    </div>
-</center>
+    <table class="X">
+        <tr>
+            <td>
+                <p>Правильных ответов<?=$ansvers_right?></p>
+                <p>Неправильных ответов<?=$ansvers_wrong?></p>
+            </td>
+        </tr>
+    </table>
 
-<?php
-require_once "../footer.php";
+
+</center>
