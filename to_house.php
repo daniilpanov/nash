@@ -1,7 +1,9 @@
 <?php
+function __autoload($classes){
+    require_once ("classes/".$classes.".php");
+}
 
 // создаем обьекты
-
 $daniil_house = new House();
 $ivan_house = new House();
 $lyubomyr_house = new Block();
