@@ -51,4 +51,3 @@ class Db extends Config
 	    mysqli_close($this->connection);
 	}
 }
-?>
