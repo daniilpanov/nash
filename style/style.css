@@ -1,3 +1,21 @@
+.header{
+    background-color: grey;
+    text-align: center;
+}
+
+.mycol{
+    background-color:yellow ;
+    padding: 20px 0px;
+}
+
+.sitename{
+    padding-top: 2%;
+    font-style: italic;
+    color: white;
+}
+
+
+
 div.jumbotron{
 	background: darkred;
 }
