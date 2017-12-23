@@ -4,8 +4,27 @@
 }
 
 .mycol{
-    background-color:yellow ;
     padding: 20px 0px;
+}
+
+.menu{
+    margin: 10px;
+}
+
+.menu a{
+    background-color: #1B3F99;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+
+.menu a:hover{
+    background-color: #808080;
+    color: #1B3F99;
+    margin-left: 40px;
 }
 
 .sitename{
