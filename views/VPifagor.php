@@ -1,28 +1,23 @@
 <form method="post">
-    <center>
         <table class="X">
             <tr>
                 <td id='2'>
                     <p id='tr'>Введите кол-во строчек</p>
-                    <input type="text" name="td">
+                    <input type="number" name="td">
                 </td>
             </tr>
             <tr>
                 <td id='2'>
                     <p id='td'>Введите кол-во столбцов</p>
-                    <input type="text" name="tr">
+                    <input type="number" name="tr">
                 </td>
             </tr>
             <tr><td><h1><input type="submit" value="Создать"></h1></td></tr>
         </table>
-    </center>
 </form>
-<center>
-
         <?php
-        if(is_numeric($_POST['tr'])&& is_numeric($_POST['td']))
+        if($_POST && !empty($_POST))
         {
-
             echo "<table class=\"X\">";
             for($tr=1;$tr<=$_POST['tr'];$tr++){
                 echo "<tr>";
@@ -53,11 +48,3 @@
             }
             echo "</table>";
         }
-        else
-        {
-            die("Введите, пожалуйста, цифры!!!");
-        }
-
-        ?>
-
-</center>
