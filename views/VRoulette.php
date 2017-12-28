@@ -68,7 +68,7 @@ else{
         }
         elseif($_POST){
             $lottery= new CRoulette($_POST);
-            $lottery->checklottery();
+            $lottery->checkroulette();
             echo "<a href=\"index.php?in=roulette\"><b><i>Сыграть ещё раз</i></b></a>";
         }
     }
@@ -96,7 +96,6 @@ else{
                         <td><input type="submit" value="Проверить"></td>
                     </tr>
                 </table>
-            </center>
             </center>
         </form>
         <?php

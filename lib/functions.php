@@ -3,19 +3,36 @@
 //Таблица Пифагора
 function pifagorTable($row,$col)
 {
-    echo "<table>";
-        for ($i = 1; $i <= $row; $i++) {
+    if($row &&$col && !empty($row && $col))
+    {
+        echo "<table class=\"X\">";
+        for($tr=1;$tr<=$row;$tr++){
             echo "<tr>";
-            if ($i == 1) {
-                for ($j = 1; $j <= $col; $j++) {
-                    echo "<td class='first'>" . $j . "</td>";
-                }
-            } else {
-                for ($j = 1; $j <= $col; $j++) {
-                    echo "<td>" . $i * $j . "</td>";
+            if ($tr == 1){
+                for ($td=1;$td<=$col;$td++){
+                    echo "<td class='first'>";
+                    if ($td!=1){
+                        echo $td;
+                    }
+                    echo "</td>";
                 }
             }
+            else{
+                for ($td=1;$td<=$col;$td++){
+                    if($td==1){
+                        echo "<td class='first'>";
+                    }
+                    else{
+                        echo "<td id='2'>";
+                    }
+
+                    echo $tr*$td;
+                    echo "</td>";
+                }
+            }
+
             echo "</tr>";
         }
-    echo "</table>";
+        echo "</table>";
+    }
 }

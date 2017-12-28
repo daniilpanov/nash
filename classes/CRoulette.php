@@ -17,7 +17,7 @@ class CRoulette
         $this->six = $data["numb6"];
     }
 
-    public function checklottery(){
+    public function checkroulette(){
         // Проверка на совпадение чисел
         $a=rand(1,36);
         $b=rand(1,36);

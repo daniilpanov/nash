@@ -11,7 +11,7 @@ require_once "menu.php";
 
 ?>
     </div>
-    <div class="col-md-10"></div>
+<!--    <div class="col-md-10"></div>-->
     <script type="text/javascript" src="lib/Time.js"></script>
     <center>
     <span id="doc_time">

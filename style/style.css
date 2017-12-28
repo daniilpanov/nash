@@ -19,7 +19,6 @@
     display: block;
     text-decoration: none;
     border-radius: 10px;
-
 }
 
 .menu a:hover{
@@ -54,7 +53,7 @@ td{
 }
 /*}*/
 
-/*для рулетки{*/
+/*для рулетки и лоттереи{*/
 .user{
     background-color: royalblue;
     border-radius: 5px;
