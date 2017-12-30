@@ -1,0 +1,33 @@
+table,
+table tr,
+table tr td,
+table tr td a{
+    text-align: center;
+    text-decoration: none;
+}
+table{
+    position: center;
+}
+table tr,
+table tr td{
+    margin: 5px;
+    background-color: #232323;
+    border-radius: 5px;
+}
+table tr td a{
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+    border: 1px darkblue dot-dot-dash;
+    color: white;
+}
+a{
+    text-underline: none;
+    background-color: gold;
+    width: 40px;
+    height: 40px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0;
+}

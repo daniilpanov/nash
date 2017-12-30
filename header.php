@@ -1,8 +1,5 @@
 <?php
 
-// подключим библиотеку функция
-require_once "lib/functions.php";
-
 // автозагрузка классов
 function __autoload($name)
 {
