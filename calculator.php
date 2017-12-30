@@ -59,13 +59,13 @@ if ($_GET){
     if ($_GET['c']){
         $rezult[$a] = $rezult-$taked/10;
     }
-        if ($_GET['do']){
-            $rezult[$a]=$rezult[$a]{$taked};
-            $a++;
-        }
-        if ($_GET['take']){
-            die("<a href=\"calculator.php\"><b>заного</b></a>");
-        }
+    if ($_GET['do']){
+        $rezult[$a]=$rezult[$a]{$taked};
+        $a++;
+    }
+    if ($_GET['take']){
+        die("<a href=\"calculator.php\"><b>заного</b></a>");
+    }
 }
 ?>
 </body>
