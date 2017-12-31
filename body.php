@@ -1,6 +1,6 @@
 <body>
 <div class="row header">
-    <div class="col-md-2 mycol"><img src="img/logo.png" height="150px"></div>
+    <div class="col-md-2 mycol"><img src="img/php-logo.png" height="150px"></div>
     <div class="col-md-10"><h1 class="sitename"><i>The Daniil's project</i></h1></div>
 </div>
 <div class="row">
