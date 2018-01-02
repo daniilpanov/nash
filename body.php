@@ -23,7 +23,6 @@ require_once "menu.php";
     </script>
 
         <?php
-
 if ($_GET['in'] == "kostu"){
     require_once "kostu/index.php";
 }
