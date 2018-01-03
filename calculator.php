@@ -7,7 +7,7 @@ for ($c=0;$c<=9;$c++){
 $id = 1;
 $last_rezult = "";
 $rezult[$id] = 0;
-if ($rezult != 0){
+if ($rezult[$id] != 0){
     if ($_GET['n']) {
         $last_rezult = $rezult[$id];
         $id++;
