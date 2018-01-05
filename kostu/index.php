@@ -38,11 +38,11 @@ elseif($_POST['go']){
     $box2=rand(1,6);
     $summa=$box1+$box2;
     ?>
-    <img src="kostu/ris<?=$box1?>.gif">
-    <img src="kostu/ris<?=$box2?>.gif">
+    <img src="img/ris<?=$box1?>.gif">
+    <img src="img/ris<?=$box2?>.gif">
     <table>
         <tr><td><br><b>Сумма на кубиках равна:<?=$summa;?></b></td></tr>
     </table>
-    <a class="BACK" href="index.php?in=kostu">Сыграть ещё</a>
+    <form method="post"><input type="submit" name="go" value="бросить кости"></form>
     <?php
 }

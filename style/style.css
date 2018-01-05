@@ -17,10 +17,24 @@
     text-decoration: none;
     border-radius: 10px;
 }
+.menu #first{
+    background-color: green;
+    color: darkblue;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+}
 .menu a:hover{
-    background-color: #808080;
-    color: #1B3F99;
-    margin-left: 40px;
+    background-color: red;
+    color: goldenrod;
+    margin-left: 15px;
+}
+.menu #first:hover{
+    background-color: red;
+    color: royalblue;
+    margin-left: 15px;
+    text-decoration: underline;
 }
 .sitename{
     padding-top: 2%;

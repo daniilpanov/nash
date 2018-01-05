@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор|Сайт"НАШ"</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
 <?php
 for ($c=0;$c<=9;$c++){
     $number[$c] = $c;
@@ -44,13 +50,6 @@ elseif ($rezult[$id] == 0){
 
 
 ?>
-
-<head>
-    <title>Калькулятор|Сайт"НАШ"</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="calculator.css">
-</head>
-<body>
 <center>
     <table>
         <tr>
