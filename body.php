@@ -31,6 +31,7 @@ elseif ($_GET['in'] == "roulette"){
 }
 elseif ($_GET['in'] == "victorina"){
     require_once "views/VVictorina.php";
+
 }
 elseif ($_GET['in'] == "Pifagor"){
     require_once "views/VPifagor.php";

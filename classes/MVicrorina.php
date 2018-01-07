@@ -3,11 +3,11 @@
 
 class MVicrorina extends Db
 {
-    protected function getAnswers($id)
+
+    protected function getAnswer($id)
     {
 
         $sql = "SELECT * FROM answers WHERE id={$id}";
-
         $result = $this->sql($sql);
         return $result;
 

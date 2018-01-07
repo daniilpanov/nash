@@ -2,10 +2,11 @@
 
 class CVictorina extends MVicrorina
 {
-    public function getoneAnswer($id)
+
+    public function getOneAnswer($id)
     {
 
-        $answer = $this->getAnswers($id);
+        $answer = $this->getAnswer($id);
         return $answer;
     }
 }
