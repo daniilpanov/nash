@@ -1,0 +1,1 @@
+<a href="?page=victorinaadd">Добавить вопрос</a>

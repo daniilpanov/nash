@@ -36,6 +36,9 @@ elseif ($_GET['in'] == "victorina"){
 elseif ($_GET['in'] == "Pifagor"){
     require_once "views/VPifagor.php";
 }
+elseif($_GET['in'] == "myhome"){
+            require_once "views/Vmyhome.php";
+        }
 ?>
 
 </div>

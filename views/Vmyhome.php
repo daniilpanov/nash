@@ -1,0 +1,2 @@
+<iframe src="https://www.google.com/maps/embed?pb=!4v1515400847764!6m8!1m7!1sUhE2UOjk1MdqAIfmtQt5wA!2m2!1d59.83128925239824!2d30.15271966649691!3f35.35337301907844!4f3.3649046951082227!5f0.4000000000000002" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<script src="https://panoramas.api-maps.yandex.ru/embed/1.x/?lang=ru&ll=30.15329511%2C59.83214335&ost=dir%3A41.166650650134514%2C-4.0547662176637145~span%3A119.99999999999999%2C61.84329365162907&size=600%2C450&l=stv"></script>
