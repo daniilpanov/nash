@@ -11,7 +11,6 @@ require_once "menu.php";
 
 ?>
     </div>
-<!--    <div class="col-md-10"></div>-->
     <script type="text/javascript" src="../lib/Time.js"></script>
     <center>
     <span id="doc_time">
@@ -23,19 +22,19 @@ require_once "menu.php";
     </script>
 
         <?php
-        if($_POST)
-        {
+if($_POST)
+{
 
-        }
+}
 
-        if($_GET){
-            if ($_GET['in'] == "victorina"){
-                require_once "views/VVictorina.php";
-            }
-            elseif ($_GET['page'] == "victorinaadd"){
-                require_once "views/VVictorinaadd.php";
-            }
-        }
+if($_GET){
+    if ($_GET['page'] == "victorina"){
+        require_once "views/VVictorina.php";
+    }
+    elseif ($_GET['page'] == "victorinaadd"){
+        require_once "views/VVictorinaadd.php";
+    }
+}
 
 ?>
 

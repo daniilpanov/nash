@@ -1,7 +1,6 @@
 <?php
-// будем использовать механизм сессий
+// будем использовать сессии
 session_start();
-
 // создадим новый обьект нашей викторины
 $answers = new CVictorina();
 
@@ -43,7 +42,7 @@ if($_SESSION['wrong']<3)
         $_SESSION['right']=null;
         $_SESSION['wrong']=null;
         echo "<h1>Вы победили!!!</h1>";
-        echo '<a class="btn btn-primary btn-lg" href="index.php?in=victorina" role="button">Сиграть еще</a>';
+        echo '<a class="btn btn-primary btn-lg" href="index.php?page=victorina" role="button">Сиграть еще</a>';
         die();
     }
 
@@ -71,11 +70,11 @@ if($_SESSION['wrong']<3)
     </div>
 
 
-    <a class="btn btn-primary btn-lg" href="?in=victorina&go=<?=$id;?>&response=<?=$value['response1'];?>" role="button"><?=$value['response1'];?></a>
-    <a class="btn btn-primary btn-lg" href="?in=victorina&go=<?=$id;?>&response=<?=$value['response2'];?>" role="button"><?=$value['response2'];?></a>
-    <a class="btn btn-primary btn-lg" href="?in=victorina&go=<?=$id;?>&response=<?=$value['response3'];?>" role="button"><?=$value['response3'];?></a>
-    <a class="btn btn-primary btn-lg" href="?in=victorina&go=<?=$id;?>&response=<?=$value['response4'];?>" role="button"><?=$value['response4'];?></a>
-    <a class="btn btn-primary btn-lg" href="?in=victorina&go=<?=$id;?>" role="button">Далее</a>
+    <a class="btn btn-primary btn-lg" href="?page=victorina&go=<?=$id;?>&response=<?=$value['response1'];?>" role="button"><?=$value['response1'];?></a>
+    <a class="btn btn-primary btn-lg" href="?page=victorina&go=<?=$id;?>&response=<?=$value['response2'];?>" role="button"><?=$value['response2'];?></a>
+    <a class="btn btn-primary btn-lg" href="?page=victorina&go=<?=$id;?>&response=<?=$value['response3'];?>" role="button"><?=$value['response3'];?></a>
+    <a class="btn btn-primary btn-lg" href="?page=victorina&go=<?=$id;?>&response=<?=$value['response4'];?>" role="button"><?=$value['response4'];?></a>
+    <a class="btn btn-primary btn-lg" href="?page=victorina&go=<?=$id;?>" role="button">Далее</a>
 
 
     <center>

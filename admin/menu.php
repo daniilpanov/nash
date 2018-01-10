@@ -1,1 +1,1 @@
-<a href="?in=victorina">Викторина</a><br>
+<a href="?page=victorina">Викторина</a><br>

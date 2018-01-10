@@ -1,4 +1,3 @@
-/*для всего сайта*/
 .header{
     background-color: grey;
     text-align: center;
@@ -48,101 +47,41 @@ body:hover{
     background-color: #b25504;
 }
 
-/*общее*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-td{
-    text-align: center;
-}
-
-/*для рулетки*/
-.user{
-    background-color: royalblue;
-    border-radius: 5px;
-    margin: 2px;
-    border: 1px solid darkblue;
-    width: 40px;
-    height: 40px;
-}
-td.user{
-    background-color: gold;
-}
-input.user:hover,input.user:active{
-    width: 50px;
-    height: 50px;
-}
-td.h{
-    margin: 3px;
-    background-color: peru;
-    border: 1px solid darkblue;
-}
-td.h:hover{
-    background-color: royalblue;
-}
-td.f{
-    margin: 3px;
-    background-color: grey;
-    border: 1px solid darkblue;
-}
-td.f:hover{
-    background-color: gold;
-}
-
-/*для часов*/
 span#doc_time{
     border: 5px dashed #5a86ff;
 }
-
-
-/*для викторины*/
-div.jumbotron{
-    background: darkred;
+a{
+    background-color: #1B3F99;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
 }
-p#1{
-    background: blue;
+a:hover{
+    background-color: gold;
+    color: black;
+    margin-left: 15px;
 }
-div.right{
-    background: green;
+a.new{
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
 }
-div.wrong{
-    background: red;
-}
-
-/*для таблицы Пифагора*/
-.X td{
-    border: 2px seagreen solid;
+form[method=post] input[type=text]{
+    background-color: gold;
+    display: inline;
+    margin-left: 20px;
     padding: 5px;
-    border-radius: 2px;
 }
-.first
-{
-    border-radius: 2px;
-    padding: 5px;
-    border: 2px seagreen solid;
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    background-color: yellow;
-}
-.X{
-    background-color: #90ffff;
-    border: 1px dashed darkblue;
+input[type=submit]{
+    border: none;
     border-radius: 5px;
+    box-shadow: 0 0 10px 5px;
 }
-.X:hover{
-    border: 3px red dashed;
+input[type=submit]:hover{
+    box-shadow: 0 0 25px 10px darkgrey;
+    padding: 10px;
 }
-.X:active{
-    border: 5px blue solid;
-}
-.X input[type=submit]{
-    background-color: #90ffff;
-    background: unset;
-}
-.X input[type=submit]:hover{
-    padding: 5px;
+input[type=submit]:active{
+    box-shadow: none;
 }

@@ -1,8 +1,8 @@
-<a href="?in=kostu">Игра в кости</a><br>
-<a href="?in=roulette">Рулетка</a><br>
-<a href="?in=victorina">Викторина</a><br>
-<a href="?in=Pifagor">Таблица Пифагора</a><br>
-<a href="?in=myhome" id="first">Где я живу</a>
+<a href="?page=kostu">Игра в кости</a><br>
+<a href="?page=roulette">Рулетка</a><br>
+<a href="?page=victorina">Викторина</a><br>
+<a href="?page=Pifagor">Таблица Пифагора</a><br>
+<a href="?page=myhome" id="first">Где я живу</a>
 <?php
 if($_GET){
     ?>
