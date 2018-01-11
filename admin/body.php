@@ -22,17 +22,12 @@ require_once "menu.php";
     </script>
 
         <?php
-if($_POST)
-{
-
-}
-
 if($_GET){
     if ($_GET['page'] == "victorina"){
         require_once "views/VVictorina.php";
     }
     elseif ($_GET['page'] == "victorinaadd"){
-        require_once "views/VVictorinaadd.php";
+        require_once "views/VVictorina.php";
     }
 }
 
