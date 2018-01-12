@@ -66,6 +66,10 @@ a.new{
     display: inline-block;
     width: 30%;
     margin: 15px;
+    box-shadow: 0 0 5px 1px,inset 0 0 2px 1px white;
+}
+a.new:active{
+    box-shadow: 0 0 0 0,inset 0 0 5px 2px;
 }
 form[method=post] input[type=text]{
     background-color: gold;
@@ -76,12 +80,12 @@ form[method=post] input[type=text]{
 input[type=submit]{
     border: none;
     border-radius: 5px;
-    box-shadow: 0 0 10px 5px;
+    box-shadow: 0 0 10px 5px,inset 0 0 5px 2px white;
 }
 input[type=submit]:hover{
-    box-shadow: 0 0 25px 10px darkgrey;
+    box-shadow: 0 0 8px 3px;
     padding: 10px;
 }
 input[type=submit]:active{
-    box-shadow: none;
+    box-shadow: 0 0 0 0,inset 0 0 5px 2px;
 }

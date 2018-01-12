@@ -8,6 +8,7 @@
 </center>
 
 <?php
+$z = new Db();
 if ($_GET['level'])
 {
     if ($_GET['level'] == 'new')
@@ -20,10 +21,23 @@ if ($_GET['level'])
             <input type="text" name="resp3" placeholder="ОТВЕТ №3">
             <input type="text" name="resp4" placeholder="ОТВЕТ №4">
             <input type="text" name="v_resp" placeholder="ПРАВИЛЬНЫЙ ОТВЕТ" style="background-color: darkblue">
-            <input type="submit" value="Отправить">
+            <input type="submit" name="go" value="Отправить">
         </form>
         <?php
-        $sql = "INSERT INTO answers (question, response1, response2, response3, response4, valid_responce) 
-        VALUES ('{$_POST['question']}','{$_POST['resp1']}','{$_POST['resp2']}','{$_POST['resp3']}','{$_POST['resp4']}','{$_POST['v_resp']}')";
+
+
+        if($_POST['go'])
+        {
+            $data = $result->getAnswer($_POST, $_GET);
+        }
+
+    }
+    elseif ($_GET['level'] == 'add')
+    {
+
+    }
+    elseif ($_GET['level'] == 'delete')
+    {
+        $data = $result->getAnswer($_GET);
     }
 }

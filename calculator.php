@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['now'];
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -10,40 +14,28 @@
 for ($c=0;$c<=9;$c++){
     $number[$c] = $c;
 }
-$id = 1;
-$last_rezult = "";
-$rezult[$id] = 0;
-if ($rezult[$id] != 0){
-    if ($_GET['n']) {
-        $last_rezult = $rezult[$id];
-        $id++;
-        $rezult[$id] = $last_rezult."".$_GET['n'];
+if (!empty($_SESSION['now'])){
+    if ($_GET['n']){
+        $_SESSION['now'] = $_SESSION['now']*10+$_GET['n'];
     }
     elseif ($_GET['fl']){
-        $last_rezult = $rezult[$id];
-        $id++;
-        $rezult[$id] = $last_rezult."".$_GET['fl'];
+        $_SESSION['now'] = $_SESSION['now'].''.$_GET['fl'];
     }
     elseif ($_GET['c']){
-        $last_rezult = $rezult[$id];
-        $id++;
-        $rezult[$id] = ($last_rezult-$_GET['c'])/10;
+        $_SESSION['now'] = ($_SESSION['now']-$_GET['c'])/10;
     }
     elseif ($_GET['do']){
-        $last_rezult = $rezult[$id];
-        $id++;
-        $rezult[$id] = $last_rezult."".$_GET['do'];
+        $_SESSION['now'] = $_SESSION['now'].''.$_GET['do'];
     }
     elseif ($_GET['take']){
-        echo "<h1>".$rezult[$id]."</h1>";
+        die("<h1>Вы получили число ".$_SESSION['now']."</h1>");
     }
 }
-elseif ($rezult[$id] == 0){
+elseif (empty($_SESSION['now'])){
     if ($_GET['n']){
-        $rezult[$id] = "";
-        $rezult[$id] = $_GET['n'];
+        $_SESSION['now'] = $_GET['n'];
     }
-    else{
+    elseif ($_GET){
         echo "<h1>Введите число!</h1>";
     }
 }
@@ -53,7 +45,7 @@ elseif ($rezult[$id] == 0){
 <center>
     <table>
         <tr>
-            <td><div><h1><?=$rezult[$id]?></h1></div></td>
+            <td><div><h1><?=$_SESSION['now']?></h1></div></td>
             <td><h1><a href="?c">C</a></h1></td>
         </tr>
     </table>
@@ -84,7 +76,7 @@ elseif ($rezult[$id] == 0){
             <td><h1><a href="?take==">=</a></h1></td>
             <td><h1><a href="?do=/">/</a></h1></td>
         </tr>
-    </table></center>
-
+    </table></center><hr>
 </body>
 </html>
+<?=$_SESSION['now'].''.$_GET['n'].''.$_SESSION['last']?>
