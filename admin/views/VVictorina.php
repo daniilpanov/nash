@@ -8,7 +8,7 @@
 </center>
 
 <?php
-$z = new Db();
+$z = new MVictorina();
 if ($_GET['level'])
 {
     if ($_GET['level'] == 'new')
@@ -28,7 +28,7 @@ if ($_GET['level'])
 
         if($_POST['go'])
         {
-            $data = $result->getAnswer($_POST, $_GET);
+            $data = $this->getAnswer($_POST, $_GET);
         }
 
     }
@@ -38,6 +38,6 @@ if ($_GET['level'])
     }
     elseif ($_GET['level'] == 'delete')
     {
-        $data = $result->getAnswer($_GET);
+        $data = $this->getAnswer($_GET);
     }
 }

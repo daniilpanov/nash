@@ -1,5 +1,5 @@
 <?php
-class M_CVictorina extends Db
+class MVictorina extends Db
 {
     public function getAnswer()
     {
