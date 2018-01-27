@@ -22,14 +22,27 @@ require_once "menu.php";
     </script>
 
         <?php
+
+// Router
+// если нажата ссылка
 if($_GET){
     if ($_GET['page'] == "victorina"){
         require_once "views/VVictorina.php";
     }
     elseif ($_GET['page'] == "victorinaadd"){
-        require_once "views/VVictorina.php";
+        require_once "views/VVictorinaadd.php";
     }
 }
+
+// если данные пришли с формы
+if ($_POST)
+{
+    if ($_GET['page'] == "victorinaadd"){
+        $addanswers = new \app\classes\CVictorina($_POST);
+    }
+}
+
+
 
 ?>
 

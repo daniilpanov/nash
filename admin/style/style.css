@@ -89,3 +89,8 @@ input[type=submit]:hover{
 input[type=submit]:active{
     box-shadow: 0 0 0 0,inset 0 0 5px 2px;
 }
+
+.victorinaadmin
+{
+    text-align: center;
+}

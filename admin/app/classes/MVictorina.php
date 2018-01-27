@@ -1,14 +1,16 @@
 <?php
-class MVictorina extends Db
+namespace app\classes;
+
+class MVictorina
 {
     // Если пользователь добавляет вопрос
-    public function NewAnswer()
+    public function NewAnswer($data)
     {
         $sql = "INSERT INTO `answers`
         (question, response1, response2, response3, response4, valid_responce)
         VALUES
-        ('{$_POST["question"]}', '{$_POST["resp1"]}', '{$_POST["resp2"]}', '{$_POST["resp3"]}', '{$_POST["resp4"]}', '{$_POST["v_resp"]}')";
-        $result = $this->sql($sql);
+        ('{$data["question"]}', '{$data["resp1"]}', '{$data["resp2"]}', '{$data["resp3"]}', '{$data["resp4"]}', '{$data["v_resp"]}')";
+        $result = \app\classes\Db::getInstance()->sql($sql);
         return $result;
     }
     // Если пользователь редактирует вопрос
