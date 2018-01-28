@@ -1,9 +1,11 @@
-<?php 
-    class Config
-    {
-        protected $DB_HOST = "localhost"; // адрес сервера БД
-        protected $DB_USER = "daniil"; // имя пользователя
-        protected $DB_PASS = "12345"; // пароль пользователя
-        protected $DB_NAME = "victorina"; // название БД
-        protected $SQLCHARSET = "utf8"; // кодировка БД
-    }
+﻿<?php
+namespace classes;
+     
+class Config
+{
+    const DB_HOST = "localhost"; // адрес сервера БД
+    const DB_USER = "daniil"; // имя пользователя
+    const DB_PASS = "12345"; // пароль пользователя
+    const DB_NAME = "victorina"; // название БД
+    const SQLCHARSET = "utf8"; // кодировка БД
+}

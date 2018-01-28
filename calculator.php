@@ -1,6 +1,10 @@
 <?php
 session_start();
-$_SESSION['now'];
+if (!$_SESSION['now'])
+{
+    $_SESSION['now'];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -30,6 +34,9 @@ if (!empty($_SESSION['now'])){
     elseif ($_GET['take']){
         die("<h1>Вы получили число ".$_SESSION['now']."</h1>");
     }
+    elseif ($_GET['null']){
+        unset($_SESSION['now']);
+    }
 }
 elseif (empty($_SESSION['now'])){
     if ($_GET['n']){
@@ -44,6 +51,7 @@ elseif (empty($_SESSION['now'])){
 ?>
 <center>
     <table>
+        <thead><a href="?null">Полный сброс</a></thead>
         <tr>
             <td><div><h1><?=$_SESSION['now']?></h1></div></td>
             <td><h1><a href="?c">C</a></h1></td>
@@ -51,6 +59,7 @@ elseif (empty($_SESSION['now'])){
     </table>
 </center>
     <center><table>
+
         <tr>
             <td><h1><a href="?n=<?=$number[1]?>"><?=$number[1]?></a></h1></td>
             <td><h1><a href="?n=<?=$number[2]?>"><?=$number[2]?></a></h1></td>
@@ -79,4 +88,3 @@ elseif (empty($_SESSION['now'])){
     </table></center><hr>
 </body>
 </html>
-<?=$_SESSION['now'].''.$_GET['n'].''.$_SESSION['last']?>

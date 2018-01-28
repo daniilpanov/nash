@@ -1,52 +1,68 @@
-<?php
+﻿<?php
+namespace classes;
 
 /**
- * @filename DB.class.php
- * набор компонентов для работы с БД
+ * @filename DB.php
+ * набор компонентов для работы с БД (Singleton)
  * @author Любомир Пона
  * @copyright 24.09.2013
+ * @updated 25.12.2017
  */
- 
-class Db extends Config 
-{
-    private $connection; // идентефикатор соединения
 
-    // открываем соединение с сервером БД
-    public function  __construct() 
-	{
+class Db extends Config
+{
+    private static $instance = null; // объект для работы с БД
+    private static $handler; // идентефикатор соединения
+
+    // закрываем возможность создания и дублирования объектов
+    private function  __construct()
+    {
         $this->open_connection();
     }
+    private function __clone(){}
+    private function __wakeup(){}
 
+    // объект для бароты с БД
+    public static function getInstance()
+    {
+        if (self::$instance === null)
+        {
+           self::$instance = new self;
+        }
+
+        return self::$instance;
+
+    }
+
+    // соединяемся с БД
     private function open_connection()
-	{ 
-        $this->connection = mysqli_connect($this->DB_HOST, $this->DB_USER, $this->DB_PASS, $this->DB_NAME);
+    {
+        self::$handler = mysqli_connect(self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
 
         // если соединение не открыто, выдаем сообщение об ошибке
-        if (!$this->connection)
-		{
+        if (!self::$handler)
+        {
             die("Ошибка соединения с базой данных: ". mysqli_error());
         }
 
         // установка принудительной кодировки UTF-8
-        mysqli_query($this->connection, "set names utf8") or die ("set names utf8 failed");
+        mysqli_query(self::$handler, "set names utf8") or die ("set names utf8 failed");
     }
 
     // реализация запроса к БД
     public function sql($query)
-	{
-        $result = mysqli_query($this->connection, $query);
-        
+    {
+        $result = mysqli_query(self::$handler, $query);
+
         // если запрос не удался, выдаем сообщение об ошибке
         if (!$result)
-		{
-             die ("Ошибка запроса к базе данных: ". mysqli_error());
+        {
+            die ("Ошибка запроса к базе данных: ". mysqli_error());
         }
+
         return $result;
     }
 
-	// закрываем соединение с сервером БД
-	public function  __destruct()
-	{
-	    mysqli_close($this->connection);
-	}
 }
+?>
+
