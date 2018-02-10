@@ -1,12 +1,12 @@
-
 <?php
+namespace app\classes;
 
-class MVicrorina extends Db
+class MVicrorina
 {
     protected function getAnswer($id)
     {
         $sql = "SELECT * FROM answers WHERE id={$id}";
-        $result = $this->sql($sql);
+        $result = \app\classes\Db::getInstance()->sql($sql);
         return $result;
     }
 }

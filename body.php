@@ -21,7 +21,8 @@ require_once "menu.php";
         clock();
     </script>
 
-        <?php
+<?php
+// маршрутизатор
 if ($_GET['page'] == "kostu"){
     require_once "kostu/index.php";
 }

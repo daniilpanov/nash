@@ -2,7 +2,7 @@
 // будем использовать сессии
 session_start();
 // создадим новый обьект нашей викторины
-$answers = new CVictorina();
+$answers = new \app\classes\CVictorina();
 
 // проверим запустили ли викторину впервые
 if(!$_GET['go'])
