@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 02 2017 г., 12:45
+-- Время создания: Фев 10 2018 г., 11:11
 -- Версия сервера: 10.1.16-MariaDB
 -- Версия PHP: 7.0.9
 
@@ -43,7 +43,8 @@ CREATE TABLE `answers` (
 INSERT INTO `answers` (`id`, `question`, `response1`, `response2`, `response3`, `response4`, `valid_responce`) VALUES
 (1, 'Какого цвета солнце?', 'оранжевое', 'красное', 'коричневое', 'желтое ', 'желтое'),
 (2, 'Сколько месяцев в году?', '5', '4', '10', '12', '12'),
-(3, 'Кто такой колобок', 'сказочный герой', 'сосед', 'друг', 'президент', 'сказочный герой');
+(3, 'Кто такой колобок', 'сказочный герой', 'сосед', 'друг', 'президент', 'сказочный герой'),
+(4, 'Как', 'так', 'сяк', 'и  так', 'и сяк', 'так');
 
 --
 -- Индексы сохранённых таблиц
@@ -63,7 +64,7 @@ ALTER TABLE `answers`
 -- AUTO_INCREMENT для таблицы `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
