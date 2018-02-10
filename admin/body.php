@@ -30,17 +30,30 @@ if($_GET){
         require_once "views/VVictorina.php";
     }
     elseif ($_GET['page'] == "victorinaadd"){
-        require_once "views/VVictorinaadd.php";
+        if(!$_POST)
+        {
+            require_once "views/VVictorinaadd.php";
+        }
+        else
+        {
+            // если данные пришли с формы
+            if ($_GET['page'] == "victorinaadd"){
+                if($addanswers = new \app\classes\CVictorina($_POST))
+                {
+                    echo "Новый вопрос добавлен в Базу данных";
+                }
+                else
+                {
+                    echo "Ошибка добавления вопроса!";
+                }
+            }
+        }
+
     }
 }
 
-// если данные пришли с формы
-if ($_POST)
-{
-    if ($_GET['page'] == "victorinaadd"){
-        $addanswers = new \app\classes\CVictorina($_POST);
-    }
-}
+
+
 
 
 
