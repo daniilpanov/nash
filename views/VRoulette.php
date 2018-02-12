@@ -67,7 +67,7 @@ else{
             echo "<p>Вы ввели число, которое больше 36";
         }
         elseif($_POST){
-            $lottery= new CRoulette($_POST);
+            $lottery= new app\classes\CRoulette($_POST);
             $lottery->checkroulette();
             echo "<a href=\"index.php?in=roulette\"><b><i>Сыграть ещё раз</i></b></a>";
         }

@@ -1,4 +1,5 @@
 <?php
+namespace app\classes;
 class CRoulette
 {
     public $one;
@@ -26,7 +27,7 @@ class CRoulette
         $e=rand(1,36);
         $f=rand(1,36);
 
-        if ($a+$b+$c+$d+$e+$f == $this->one+$this->two+$this->three+$this->four+$this->five+$this->six){
+        if ($this->one+$this->two+$this->three+$this->four+$this->five+$this->six == $a+$b+$c+$d+$e+$f){
             $rezult = "ВЫ ВЫИГРАЛИ!!!";
         }
         else{
