@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Фев 10 2018 г., 11:11
--- Версия сервера: 10.1.16-MariaDB
--- Версия PHP: 7.0.9
+-- Время создания: Фев 20 2018 г., 10:37
+-- Версия сервера: 10.1.30-MariaDB
+-- Версия PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -43,8 +45,7 @@ CREATE TABLE `answers` (
 INSERT INTO `answers` (`id`, `question`, `response1`, `response2`, `response3`, `response4`, `valid_responce`) VALUES
 (1, 'Какого цвета солнце?', 'оранжевое', 'красное', 'коричневое', 'желтое ', 'желтое'),
 (2, 'Сколько месяцев в году?', '5', '4', '10', '12', '12'),
-(3, 'Кто такой колобок', 'сказочный герой', 'сосед', 'друг', 'президент', 'сказочный герой'),
-(4, 'Как', 'так', 'сяк', 'и  так', 'и сяк', 'так');
+(3, 'Кто такой колобок', 'сказочный герой', 'сосед', 'друг', 'президент', 'сказочный герой');
 
 --
 -- Индексы сохранённых таблиц
@@ -64,7 +65,9 @@ ALTER TABLE `answers`
 -- AUTO_INCREMENT для таблицы `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -23,22 +23,40 @@ require_once "menu.php";
 
 <?php
 // маршрутизатор
-if ($_GET['page'] == "kostu"){
-    require_once "kostu/index.php";
-}
-elseif ($_GET['page'] == "roulette"){
-    require_once "views/VRoulette.php";
-}
-elseif ($_GET['page'] == "victorina"){
-    require_once "views/VVictorina.php";
 
-}
-elseif ($_GET['page'] == "Pifagor"){
-    require_once "views/VPifagor.php";
-}
-elseif($_GET['page'] == "myhome"){
+    //если данные пришли по ссылке
+    if ($_GET)
+    {
+        if ($_GET['page'] == "kostu"){
+            require_once "kostu/index.php";
+        }
+        elseif ($_GET['page'] == "roulette"){
+            require_once "views/VRoulette.php";
+        }
+        elseif ($_GET['page'] == "victorina"){
+            require_once "views/VVictorina.php";
+
+        }
+        elseif ($_GET['page'] == "Pifagor"){
+            require_once "views/VPifagor.php";
+        }
+        elseif($_GET['page'] == "myhome"){
             require_once "views/Vmyhome.php";
         }
+        elseif ($_GET['page'] == "avt")
+        {
+            require_once "views/Avtorization.php";
+        }
+    }
+
+    //если данные пришли через форму
+    if ($_POST)
+    {
+        if ($_GET['page'] == "avt")
+        {
+            avt($_POST,$users);
+        }
+    }
 ?>
 </div>
 </body>

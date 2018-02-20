@@ -6,6 +6,9 @@ function __autoload($name)
     $name = str_replace('\\', '/', $name);
     require_once($name.'.php');
 }
+//подключаем библиотеку функций
+require_once "lib/functions.php";
+require_once "users.php";
 
 ?>
 <!DOCTYPE html>

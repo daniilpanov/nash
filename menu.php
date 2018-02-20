@@ -1,3 +1,4 @@
+<a href="?page=avt">Авторизация</a>
 <a href="?page=kostu">Игра в кости</a><br>
 <a href="?page=roulette">Рулетка</a><br>
 <a href="?page=victorina">Викторина</a><br>
